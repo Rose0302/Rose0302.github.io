@@ -1,0 +1,189 @@
+html{
+	/* Set height of the html page to 100% of the browser height */
+	height: 100%;
+	/* Hide horizontal scroll */
+	overflow-x: hidden;
+	font-family: 'Helvetica', sans-serif;
+}
+
+	#flower-text, #fish-text, #girl-text {
+		font-size: 30px;
+		font-weight: bold;
+		text-shadow: 2px 2px 2px #ccc;
+		margin-top: 50px;
+		text-align: center;
+	}
+
+body{
+	/* Set height of the body to 100% -- separated out of html to allow scrollTo animation */
+	height: 100%;
+	margin: 0px;
+}
+
+/* 
+Navigation Bar 
+*/
+#nav{
+	/* Fix navigation bar at the top middle of the web page */
+    position: fixed;
+    /* calc() CSS function calculates numbers of different units */
+    left: calc(50% - 50px);
+    top: 20px;
+    /* Display nav bar on top of everything else */
+    z-index: 1;
+}
+
+.nav-btn{
+	width: 20px;
+    height: 20px;
+    /* Make square div into a circle */
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid black;
+    display: inline-block;
+    cursor: pointer;
+    /* transition changes in background-color */
+    transition: background-color 0.5s;
+}
+
+/* When a nav-btn is hovered on, set background-color to black */
+.nav-btn:hover{
+	background-color: black;
+}
+
+/* 
+Cat Div
+*/
+#cat-div{
+	/* Fix cat div in the bottom left corner of the web page */
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 300px;
+	text-align: center;
+}
+
+#cat{
+	width: 300px;
+	margin-top: 18px;
+}
+
+#cat-text{
+	color: white;
+	background-color: black;
+	font-size: 32px;
+}
+
+/* 
+Parallax: Mountain Ocean and home sections;
+*/
+#sky, #ocean, #home {
+	/* Set height of div to 100% */
+	height: 100%;
+	/* The bottom three background CSS settings create parallax effect */
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+}
+
+#sky{
+	/* Set background image of mountain section using url() function */
+	background-image: url('img/sky.jpg');
+}
+
+#ocean{
+	/* Set background image of ocean section using url() function */
+	background-image: url('img/ocean.jpg');
+}
+
+#home{
+	/* Set background image of ocean section using url() function */
+	background-image: url('img/home.jpg');
+}
+
+/* 
+Flower div inside SKy section
+*/
+#flower-div{
+    position: relative;
+    width: 500px;
+    height: 300px;
+    top: calc(100% - 400px);
+    left: calc(50% - 75px);
+}
+
+#flower{
+	width: 200px;
+    display: block;
+    margin: 10px;
+}
+
+#flower-text{
+	color: black;
+    background: white;
+    font-size: 22px;
+}
+
+/* 
+Fish div inside Ocean section
+*/
+#fish-div{
+    position: relative;
+    width: 500px;
+	height: 300px;
+    top: calc(100% - 500px);
+    left: calc(50% - 75px);
+
+}
+
+#fish-text{
+	color: black;
+	background: white;
+	font-size: 22px;
+}
+
+#fish{
+    width: 200px;
+    display: block;
+    margin: 25px;
+    transform: rotate(-10deg);
+}
+
+/* 
+Girl div inside home section
+*/
+#girl-div{
+    position: relative;
+    width: 500px;
+	height: 300px;
+    top: calc(100% - 500px);
+    left: calc(50% - 75px);
+
+}
+
+#girl-text{
+	color: black;
+	background: white;
+	font-size: 22px;
+}
+
+#girl{
+    width: 100px;
+    display: block;
+    margin: 25px;
+}
+
+/* 
+Text sections after Mountain and Ocean sections
+*/
+.text-section{
+	/* Center text in the middle of browser using flexbox */
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.text{
+	width: 70%;
+}

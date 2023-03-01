@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Cat's Wishes</title>
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<!-- Navigation bar -->
+	<div id="nav">
+		<!-- link to divs on the same page using their id names -->
+		<a href="#sky"><div class="nav-btn" id="first-page"></div></a>
+		<a href="#first-text"><div class="nav-btn" id="second-page"></div></a>
+		<a href="#ocean"><div class="nav-btn" id="third-page"></div></a>
+		<a href="#second-text"><div class="nav-btn" id="fourth-page"></div></a>
+		<a href="#home"><div class="nav-btn" id="fifth-page"></div></a>
+		<a href="#third-text"><div class="nav-btn" id="sixth-page"></div></a>
+	</div>
+	
+	<div id="sky">
+		<!-- Content to display inside the mountain div -->
+		<div id="flower-div">
+			<img id="flower" src="img/flower.gif">
+			<span id="flower-text"> - Once upon a time... - </span>
+		</div>
+	</div>
+    <div id="first-text" class="text-section">
+		<p class="text" id="first-text-text"></p>
+	</div>
+	
+	<div id="ocean">
+		<!-- Content to display inside the ocean div -->
+		<div id="fish-div">
+			<img id="fish" src="img/fish.png">
+			<span id="fish-text"> - Whiskers' first wish - </span>
+		</div>
+	</div>
+    <div id="second-text" class="text-section">
+		<p class="text" id="second-text-text"></p>
+	</div>
+
+	<div id="home">
+		<!-- Content to display inside the land div -->
+		<div id="girl-div">
+			<img id="girl" src="img/girl.png">
+			<span id="girl-text"> - Whiskers' second wish - </span>
+		</div>
+	</div>
+	<div id="third-text" class="text-section">
+		<p class="text" id="third-text-text"></p>
+	</div>
+
+	<!-- Cat div position is fixed on the bottom left corner of the web page -->
+	<div id="cat-div">
+		<span id="cat-text">Hello! My name is Whiskers.</span>
+		<img id="cat" src="img/cat.gif">
+	</div>
+
+	<script>
+		const typeAnimation = (elementId, text, speed) => {
+			const element = document.getElementById(elementId);
+			let index = 0;
+			const timerId = setInterval(() => {
+				element.textContent += text.charAt(index);
+				index++;
+				if (index === text.length) {
+					clearInterval(timerId);
+				}
+			}, speed);
+		};
+
+		// Trigger the typing animation for the text in first-text div
+		const firstText = "There was a cat named Whiskers. Whiskers had two wishes: to have a never-ending supply of catnip and to be able to talk.";
+		typeAnimation("first-text-text", firstText, 50);
+
+		// Trigger the typing animation for the text in second-text div
+		const secondText = "One day, Whiskers woke up to find that his bowl was filled with an endless supply of catnip. He spent the entire day rolling around in it and feeling very happy.";
+		typeAnimation("second-text-text", secondText, 50);
+
+		// Trigger the typing animation for the text in third-text div
+	    const thirdText = "The next day, Whiskers woke up and found that he could talk! He was so excited that he spent the whole day meowing and talking to himself.";
+    	typeAnimation("third-text-text", thirdText, 50);
+    
+    </script>
+    </body>
+    </html>
