@@ -1,0 +1,86 @@
+body {
+  background-image: url("https://news.montgomeryschoolsmd.org/wp-content/uploads/2019/04/film-screening-movie.jpg");
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: brown;
+      text-align: center;
+      padding-top: 50px;
+      background-repeat: no-repeat;
+  }
+  
+  .container {
+    max-width: 330px;
+    margin: 0 auto;
+    padding: 70px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 36px;
+    color: #000000;
+    margin-bottom: 30px;
+    animation: textAnimation 2s ease-in-out infinite;
+  }
+  
+  @keyframes textAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .poster {
+    width: 140;
+    height: 110;
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .poster:hover {
+    transform: scale(1.1);
+  }
+  
+  video {
+    width: 140;
+    height: 110;
+    max-width: 100%;
+    max-height: 100%;
+    border: solid brown;
+  }
+  
+  .poster a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+
+  /* Responsive adjustments */
+@media only screen and (max-width: 480px) {
+  body {
+    font-family: Arial, sans-serif;
+    color: brown;
+    text-align: center;
+    padding-top: 22px;
+  }
+  .container {
+    max-width: 100px;
+    margin: 0 auto;
+    padding: 0px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 12px;
+  }
+
+  .poster,
+  video {
+    width: 72px;
+    height: 40px;
+  }
+}
